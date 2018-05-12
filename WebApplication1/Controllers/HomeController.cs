@@ -17,8 +17,7 @@ namespace WebApplication1.Controllers
                 LastName = "Tobe",
                 Salary = 10000
             };
-            ViewBag.Employee = emp;
-            return View();
+            return View(emp);
         }
 
         public ActionResult About()
