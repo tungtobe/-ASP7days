@@ -1,15 +1,17 @@
-﻿@using WebApplication1.Models
-@model Employee
+﻿@using WebApplication1.ViewModel
+@model EmployeeViewModel
 @{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
-    <b>Employee Details</b>
+    <b>Hello @Model.UserName</b>
     <br />
-    Name : @Model.FirstName @Model.LastName <br />
-    Salary: @Model.Salary.ToString("C")
+    Name : @Model.EmployeeName <br />
+    <span style="background-color:@Model.SalaryColor">
+    Salary: @Model.Salary
+    </span>
 </div>
 
 <div class="row">
